@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home">
     <p class="title is-4">Популярное</p>
     <b-carousel-list v-model="number" :data="top" :items-to-show="3" carousel-overlay-background="#000">
       <template #item="list">
@@ -86,3 +86,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.home{
+  padding-top: 100px;
+}
+</style>

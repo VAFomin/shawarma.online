@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="notfound">
     <p class="title">Похоже тут ничего нет...</p>
     <a class="button" href="/">
       <b-icon
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style scoped>
-div {
+.notfound {
   text-align: center;
   padding-top: 100px;
 }
