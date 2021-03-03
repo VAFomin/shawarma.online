@@ -14,18 +14,37 @@
     </div>
     <footer class="footer">
       <h1 class="title left">{{ price }} ₽</h1>
-      <a class="button is-link is-rounded right">В КОРЗИНУ</a>
+      <a class="button is-link is-rounded right" @click="addInCart">В КОРЗИНУ</a>
     </footer>
   </div>
 </template>
 
 <script>
+import {mapMutations, mapState} from "vuex";
+
 export default {
   name: "Card",
   props: {
+    id: String,
     title: String,
     description: String,
     price: String,
+  },
+  computed: {
+    ...mapState("cart", ["cart"]),
+  },
+  methods: {
+    ...mapMutations("cart", ["addItem", "setItem"]),
+
+    addInCart() {
+      const item = this.cart.find(item => item.id === this.id);
+      if (item === undefined) {
+        this.addItem({id: this.id, title: this.title, description: this.description, price: this.price, count: 1})
+      } else {
+        const newCount = item.count + 1;
+        this.setItem({id: this.id, count: newCount})
+      }
+    }
   }
 }
 </script>

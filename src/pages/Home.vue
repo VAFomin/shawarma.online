@@ -10,7 +10,7 @@
     <p id="shawarma" class="title is-4">Шаурма</p>
     <div class="columns" v-for="(shw, index) in shawarma" :key="index + 'shw_row'">
       <div class="column" v-for="(item, index) in shw" :key="index + 'shw'">
-        <Card :title="item.title" :description="item.description" :price="item.price"/>
+        <Card :id="item.id" :title="item.title" :description="item.description" :price="item.price"/>
       </div>
     </div>
 
@@ -88,7 +88,7 @@ export default {
 </script>
 
 <style scoped>
-.home{
+.home {
   padding-top: 100px;
 }
 </style>
