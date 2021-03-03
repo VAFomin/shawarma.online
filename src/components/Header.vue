@@ -10,19 +10,19 @@
       </b-navbar-item>
     </template>
     <template #start>
-      <b-navbar-item href="#">
+      <b-navbar-item href="/#">
         Главная
       </b-navbar-item>
-      <b-navbar-item href="#shawarma">
+      <b-navbar-item href="/#shawarma">
         Шаурма
       </b-navbar-item>
-      <b-navbar-item href="#drinks">
+      <b-navbar-item href="/#drinks">
         Напитки
       </b-navbar-item>
-      <b-navbar-item href="#combo">
+      <b-navbar-item href="/#combo">
         Комбо
       </b-navbar-item>
-      <b-navbar-item href="#contacts">
+      <b-navbar-item href="/#contacts">
         Контакты
       </b-navbar-item>
     </template>
