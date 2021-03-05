@@ -14,7 +14,7 @@
 
         <div class="card-elements">
           <b-field>
-            <b-numberinput v-model="number" min="0"></b-numberinput>
+            <b-numberinput v-model="number" min="0" max="100" :editable="false"></b-numberinput>
           </b-field>
 
           <p class="title is-4">{{ price * number }} ₽</p>
